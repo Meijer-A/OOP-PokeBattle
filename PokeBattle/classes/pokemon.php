@@ -3,14 +3,16 @@
 class Pokemon {
     
     public $name;
-    public $hitPoints = string;
-    public $health = string;
+    public $energyType; 
+    public $hitPoints;
+    public $health;
+    public $attacks;
+    public $weakness;
+    public $resistance;
 
-    public function __construct($name, $hitPoints, $health)
+    public function __construct($name)
     {
         $this->name = $name;
-        $this->hitPoints = $hitPoints;
-        $this->health = $health;
     }
 
 }
