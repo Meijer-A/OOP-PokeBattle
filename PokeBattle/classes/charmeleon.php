@@ -6,14 +6,14 @@ class Charmeleon extends Pokemon {
     {
         parent::__construct(
             $name,
-            "Fire",
+            EnergyType::FIRE,
             60,
             [
                 "Head Butt" => new Attack("Head Butt", 10), 
                 "Flare" => new Attack("Flare", 10)
             ],
-            [new Weakness("Water", 2)],
-            [new Resistance("Lightning", 10)]
+            [new Weakness(EnergyType::WATER, 2)],
+            [new Resistance(EnergyType::ELECTRIC, 10)]
         );
     }
 }

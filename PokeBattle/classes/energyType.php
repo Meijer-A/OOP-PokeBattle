@@ -2,10 +2,10 @@
 
 class EnergyType 
 {
-    public $name;
-
-    public function __construct($name)
-    {
-        $this->name = $name;
-    }
+    // all energytypes
+    const FIRE = 'fire';
+    const WATER = 'water';
+    const ELECTRIC = 'electric';
+    const GRASS = 'grass';
+    const FIGHTING = 'fighting';
 }
