@@ -23,7 +23,19 @@ class Pokemon {
 
     public function attackPokemon($target, $attackMove)
     {
-        $target->health -= $attackMove->damage;
+        $enemyWeakness = $target->weakness;
+        $enemyResistance = $target->resistance;
+
+        // check if the pokemon has a Weakness or resistance and change the damage if necessary
+        if ($this->energyType === $enemyWeakness->energyType) {
+            $damage = $attackMove->damage * $enemyWeakness->value;
+            $target->health -= $damage;
+        } elseif ($this->energyType === $enemyResistance->energyType) {
+            $damage = $attackMove->damage - $enemyResistance->value;
+            $target->health -= $damage;
+        } else {
+            $target->health -= $attackMove->damage;
+        }
     }
 
     public function getHealth()

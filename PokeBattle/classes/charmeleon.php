@@ -10,10 +10,10 @@ class Charmeleon extends Pokemon {
             60,
             [
                 "Head Butt" => new Attack("Head Butt", 10), 
-                "Flare" => new Attack("Flare", 10)
+                "Flare" => new Attack("Flare", 30)
             ],
-            [new Weakness(EnergyType::WATER, 2)],
-            [new Resistance(EnergyType::ELECTRIC, 10)]
+            new Weakness(EnergyType::WATER, 2),
+            new Resistance(EnergyType::ELECTRIC, 10)
         );
     }
 }

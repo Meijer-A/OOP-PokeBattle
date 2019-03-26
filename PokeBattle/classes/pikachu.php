@@ -12,8 +12,8 @@ class Pikachu extends Pokemon {
                 "Electric Ring" => new Attack("Electric Ring", 50),
                 "Pika Punch" => new Attack("Pika Punch", 20)
             ],
-            [ new Weakness(EnergyType::FIRE, 1.5) ],
-            [ new Resistance(EnergyType::FIGHTING, 20) ]
+            new Weakness(EnergyType::FIRE, 1.5),
+            new Resistance(EnergyType::FIGHTING, 20)
         );
     }
 
